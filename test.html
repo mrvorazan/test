@@ -10,7 +10,7 @@
 			 var canvas = document.getElementById('demo-animation');
     var ctx = canvas.getContext('2d');
     var images = {};
-    var total_frames = 122;
+    var total_frames = 24;
     var loaded_images = 0;
     var current_frame = 0;
 
@@ -40,7 +40,7 @@
             loaded_images += 1;
             if (loaded_images === total_frames) renderFrame();
         };
-        images[i].src = 'F' + i + '.png';
+        images[i].src = 'F' + i*5 + '.png';
     }
 		</script>
 	</body>
