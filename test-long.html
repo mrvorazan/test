@@ -10,7 +10,7 @@
 			 var canvas = document.getElementById('demo-animation');
     var ctx = canvas.getContext('2d');
     var images = {};
-    var total_frames = 122;
+    var total_frames = 61;
     var loaded_images = 0;
     var current_frame = 0;
 
@@ -22,7 +22,7 @@
         ctx.drawImage(images[current_frame], 0, 0);
         current_frame += 1;
         if (current_frame === total_frames) current_frame = 0;
-        window.setTimeout(renderFrame, 60);
+        window.setTimeout(renderFrame, 120);
     };
 
     // Load the first image as a placeholder
@@ -40,7 +40,7 @@
             loaded_images += 1;
             if (loaded_images === total_frames) renderFrame();
         };
-        images[i].src = 'F' + i + '.png';
+        images[i].src = 'F' + i*2 + '.png';
     }
 		</script>
 	</body>
